@@ -32,6 +32,7 @@ function onSignIn(googleUser) {
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
+  document.getElementById('google-signin-button').textContent = `Hey ${profile.getName()}`
   // Additional actions related to the signed-in user can be performed here
 }
 
