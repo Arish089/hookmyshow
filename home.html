@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+    <script src="https://kit.fontawesome.com/0d065f8783.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body::-webkit-scrollbar{
+            display: none;
+        }
+     body{
+        background-color: #f5f5f5;
+     }
+    </style>
+</head>
+<body>
+    
+
+<div id="navbar-container"></div>
+<div class="bg-[#e2e2e2e3] h-[300px] min-w-full mt-[111px] flex justify-between items-center py-3 ">
+    <img id="prev" src="https://static.thenounproject.com/png/1197997-200.png" class="w-16" alt="">
+<div id="slide" class="ml-12 h-[300px] flex justify-between py-3 min-w-[1200px] ">
+</div>
+<img id="next" src="https://static.thenounproject.com/png/138549-200.png" class="w-16 z-[1]" alt="">
+</div>
+<div id="recom" class="block w-[1250px] m-auto pt-10 pb-20">
+    <h1 class="my-3 ml-2 font-bold text-2xl text-[#333333]">Recommended Movies</h1>
+    <div id="mov" class="hidden justify-between mr-10">
+    <div class="flex-shrink-0 mr-3 pl-2 items-center">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS41LzEwICAzNTMuOUsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00311673-udfwwghdqy-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+        <h2 class="font-semibold font-sans text-lg">Hanuman</h2>
+        <p class="text-[#4d4d4d] font-medium">Action/Adventure/Fantasy</p>
+    </div>
+    <div class="flex-shrink-0 mx-3 pl-2">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ny43LzEwICAyNS4zSyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00348399-dlwrzqasxw-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" style="width: 200px;" alt="">
+        <h2 class="font-semibold font-sans text-lg">Merry Christmas</h2>
+        <p class="text-[#4d4d4d] font-medium">Drama/Thriller</p>
+    </div>
+    <div class="flex-shrink-0 mx-3 pl-2">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-MzEuMksgTGlrZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00348408-qnjdcqjalj-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+        <h2 class="font-semibold font-sans text-lg">Main Atal Hoon</h2>
+        <p class="text-[#4d4d4d] font-medium">Biography/Drama</p>
+    </div>    
+    <div class="flex-shrink-0 mx-3 pl-2">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS40LzEwICA2LjFLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00374968-lybbtnzhce-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+        <h2 class="font-semibold font-sans text-lg">Ole Ole</h2>
+        <p class="text-[#4d4d4d] font-medium">Adventure/Drama/family</p>
+    </div>
+    <div class="flex-shrink-0 ml-3 pl-2">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ny43LzEwICAzOS44SyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00333139-epubenyrac-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+    <h2 class="font-semibold font-sans text-lg">Captain Miller</h2>
+    <p class="text-[#4d4d4d] font-medium">Action/Period/Thriller</p>
+     </div>
+     <button id="next2"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+    <div id="mov2" class="flex justify-between mr-10">
+        <button id="prev2"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+    <div class="flex-shrink-0 mr-3 pl-2">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC44LzEwICAyMi40SyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00304730-fezjpcbvnd-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+        <h2 class="font-semibold font-sans text-lg">Fighter</h2>
+        <p class="text-[#4d4d4d] font-medium">Action/Thriller</p>
+    </div>
+    <div class="flex-shrink-0 mx-3 pl-2">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4yLzEwICA2MDAuMUsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00311762-lmdexnggxy-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+        <h2 class="font-semibold font-sans text-lg">Animal</h2>
+        <p class="text-[#4d4d4d] font-medium">Action/Crime/Drama</p>
+    </div>
+    <div class="flex-shrink-0 mx-3 pl-2">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4zLzEwICA2MTguOEsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00301886-nsckbqkrmt-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+        <h2 class="font-semibold font-sans text-lg">Salaar</h2>
+        <p class="text-[#4d4d4d] font-medium">Action/Thriller</p>
+    </div>
+    <div class="flex-shrink-0 mx-3 pl-3">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS42LzEwICAxMjRLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00363787-vvnpakrgls-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+        <h2 class="font-semibold font-sans text-lg">12th Fail</h2>
+        <p class="text-[#4d4d4d] font-medium">Drama</p>
+    </div>
+    <div class="flex-shrink-0 ml-3 pl-2">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4yLzEwICAzLjdLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00378325-aapvxrhqld-portrait.jpg" 
+        class="h-[340px] w-56 rounded-md" alt="">
+        <h2 class="font-semibold font-sans text-lg">Panchak</h2>
+        <p class="text-[#4d4d4d] font-medium">Comedy/Drama</p>
+    </div>
+    </div>
+    
+</div>
+<div class="w-[1300px] m-auto pl-16 pb-6">
+    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/stream-leadin-web-collection-202210241242.png" alt=""></div>
+
+    <div class="block w-[1350px] m-auto pt-16 pb-8">
+    <h2 class="ml-24 font-bold text-2xl text-[#333333]">The Best Of Live Events</h2>
+    <div id="mov3a" class="hidden justify-evenly w-[1350px] m-auto pl-16 py-8 mt-0">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTEwKyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png" class="w-56 h-56 rounded-md" alt="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/kids-zone-collection-202211140440.png" class="w-56 h-56 rounded-md"  alt="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTcwKyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png" class="w-56 h-56 rounded-md"  alt="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTIwKyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png" class="w-56 h-56 rounded-md"  alt="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/upskill-collection-202211140440.png" class="w-56 h-56 rounded-md"  alt="">
+        <button id="next3"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+    <div id="mov3b" class="flex justify-evenly w-[1350px] m-auto pl-16 py-8 mt-0">
+        <button id="prev3"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/upskill-collection-202211140440.png" class="w-56 h-56 rounded-md" alt="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTAgRXZlbnRz,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/interactive-games-collection-202211140440.png" class="w-56 h-56 rounded-md"  alt="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/arts-crafts-collection-202211140440.png" class="w-56 h-56 rounded-md"  alt="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTMwKyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/theatre-shows-collection-202211140440.png" class="w-56 h-56 rounded-md"  alt="">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NDArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/adventure-fun-collection-202211140440.png" class="w-56 h-56 rounded-md"  alt="">
+    </div>
+</div>
+
+<div class="h-auto pl-32 pt-5 pb-10" style="background-color: rgb(43,49,72);">
+    <img class="w-[1250px]" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-banner-web-collection-202208191200.png" alt="">
+<h3 class="font-bold mt-10 text-[26px] text-white">Premieres</h3>
+<p class="text-white font-normal">Brand new releases every friday</p>
+    <div id="mov4a" class="flex justify-between pr-24">
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00382955-cfgaevyghr-portrait.jpg"
+            class="w-56" alt="">
+            <h3 class="font-bold text-lg text-white mt-2">Borodin</h3>
+            <p class="font-normal text-white">Bengali</p>
+        </div>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00383785-bkaayemxrg-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-lg text-white mt-2">Holy Spider</h3>
+            <p class="font-normal text-white">Persian</p>
+        </div>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00331568-glzgadzdxa-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-white text-lg mt-2">Wonka</h3>
+            <p class="font-normal text-white">English</p>
+        </div>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00383140-pqfglebuwa-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-white text-lg mt-2">All Fun and Games</h3>
+            <p class="font-normal text-white" >English</p>
+        </div>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00362691-zmdbuyywkt-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-lg text-white mt-2">Harkara</h3>
+            <p class="font-normal text-white">Tamil</p>
+        </div>
+        <button id="next4"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+
+    <div id="mov4b" class="hidden justify-between pr-24">
+        <button id="prev4"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00383140-pqfglebuwa-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-white text-lg mt-2">All Fun and Games</h3>
+            <p class="font-normal text-white" >English</p>
+        </div>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00362691-zmdbuyywkt-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-lg text-white mt-2">Harkara</h3>
+            <p class="font-normal text-white">Tamil</p>
+        </div>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00368036-tgtegktbuf-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-white text-lg mt-2">The Moon</h3>
+            <p class="font-normal text-white">Korean</p>
+        </div>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00355495-tzxhsjuhts-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-white text-lg mt-2">N4</h3>
+            <p class="font-normal text-white" >Tamil</p>
+        </div>
+        <div>
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00384622-hdrmvykjak-portrait.jpg" 
+            class="w-56"alt="">
+            <h3 class="font-bold text-lg text-white mt-2">Koshtoneer</h3>
+            <p class="font-normal text-white">Bengali</p>
+        </div>
+    </div>
+</div>
+<div class="w-[1440px] pl-32 py-10">
+    <h1 class="font-bold text-2xl text-[#333333] pb-3">Your Music Studio</h1>
+    <div id="mov5a" class="hidden justify-between">
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxMCBGZWIgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00375749-gxehmzbnjy-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Mahindra Blues Festival 2024</h3>
+            <p class="text-base font-normal text-[#333333]">Mehboob Studios: Bandra(W) Concerts</p>
+        </div>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAyNCBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00377520-qqauapgjnd-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Puranchand Wadali and Lakhwinder Wadali</h3>
+            <p class="text-base font-normal text-[#333333]">Nehru Centre: Mumbai Concerts</p>
+        </div>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00366782-xshehdxwaf-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Lollapaloza India 2024</h3>
+            <p class="text-base font-normal text-[#333333]">Mahalaxmi Race Course: Mumbai Concerts</p>
+        </div>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAyNSBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00372986-nakzhwewvq-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Sunburn Arena Ft.Indo Warehouse - Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">Dome, NSCI, SVP Stadium, Worli: Mumbai Concerts</p>
+        </div>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAxNSBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00381085-wxqeazxpyv-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">G-Eazy - India Tour - Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">Venue To Be Announced: Mumbai Concerts</p>
+        </div>
+        <button id="next5"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+
+    <div id="mov5b" class="flex justify-between">
+        <button id="prev5"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,lx-15,ly-15,w-50,l-end/et00384522-allxjxwwbm-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">69th Hyundai Filmfare Awards with Gujarat-Tourism</h3>
+            <p class="text-base font-normal text-[#333333]">Multiple Venues Concerts</p>
+        </div>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxNyBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00383475-tlkwuybkkq-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Sonu Nigam Live In Mumbai Journey of 30 years</h3>
+            <p class="text-base font-normal text-[#333333]">Inorbit mall: Malad Concerts</p>
+        </div>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxNiBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00373677-hrqpbwvwsu-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Ed Sheeran: +-=x Tour</h3>
+            <p class="text-base font-normal text-[#333333]">Mahalaxmi Race Course: Mumbai Concerts</p>
+        </div>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyMyBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00380961-vlheuzfpfm-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Sunburn Arena Ft.Illenium - Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">Venue To Be Announced: Mumbai Concerts</p>
+        </div>
+        <div class="w-60  pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyIE1hcg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00380817-pefsuyldae-portrait.jpg"
+            class="w-60  h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">SANAM BAND Live Concert- Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">Courtyard, R City Mall: Ghatkopar Concerts</p>
+        </div>
+    </div>
+</div>
+
+<div class="w-[1440px] pl-32 py-10">
+    <div class="font-bold flex text-2xl text-[#333333] pb-3">Outdoor Events <img class="w-10 h-7 mt-1 mx-1" src="https://in.bmscdn.com/discovery-catalog/lib/tr:w-37/new-tag-icon.png" alt="">
+    </div>
+    <div id="mov6a" class="hidden justify-between">
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,lx-15,ly-15,w-50,l-end/et00384522-vrdttfzmzw-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">69th Hyundai Filmfare Awards with Gujarat-Tourism</h3>
+            <p class="text-base font-normal text-[#333333]">Multiple Venues</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNyBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00370583-vzrpmjjkhu-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Quenn of Melody Chitra Live in Concert | Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">Shanmukhananda Hall: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAxNSBGZWIgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00382305-dvtuefwzyb-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Mughal-E-Azam</h3>
+            <p class="text-base font-normal text-[#333333]">Grand Theatre, Nita Mukesh Ambani Cultural Centre</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxMSBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00383013-aqfkhpcums-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Enthusia VJTI Marathon</h3>
+            <p class="text-base font-normal text-[#333333]">VJTI Main Gate: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCA0IEZlYg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00345580-ecyzvndmag-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Mumbai Half Marathon</h3>
+            <p class="text-base font-normal text-[#333333]">Bandra Fort Garden: Mumbai</p>
+        </div>
+        <button id="next6"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+
+    <div id="mov6b" class="flex justify-between">
+        <button id="prev6"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00014607-engdszsccv-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Imagica Theme Park</h3>
+            <p class="text-base font-normal text-[#333333]">Imagica Theme Park(Khopoli): Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00380148-fvvddxdwhy-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Maazya Baaykocha Navara</h3>
+            <p class="text-base font-normal text-[#333333]">Deenanath Mangeshkar Natyagruha: Vile Parle</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAzIEZlYg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00378314-jhqpcajtst-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Big Show: All Star Standup Comedy 3rd Feb Sophia</h3>
+            <p class="text-base font-normal text-[#333333]">Sophia Auditorium: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCA0IEZlYg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00355311-glcnrapwpb-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Kuchh Bhi Ho Sakta Hai</h3>
+            <p class="text-base font-normal text-[#333333]">Grand Theatre, Nita Mukesh Ambani Cultural Centre</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxMSBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00376279-dledckrdbt-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Juhu Fitness Marathon</h3>
+            <p class="text-base font-normal text-[#333333]">JVPD Grounds: Juhu</p>
+        </div>
+    </div>
+</div>
+
+<div class="w-[1440px] pl-32 py-10">
+    <h1 class="font-bold text-2xl text-[#333333] pb-3">Laughter Therapy</h1>
+    <div id="mov7a" class="hidden justify-between">
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAzIEZlYg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00378314-xqdfjmtfjg-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Big Show: All Star Standup Comedy 3rd Feb Sophia</h3>
+            <p class="text-base font-normal text-[#333333]">Sophia Auditorium: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyOCBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00365053-pupzhfujul-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Nothing Makes Sense FT. VARUN GROVER</h3>
+            <p class="text-base font-normal text-[#333333]">Sophia Auditorium: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCA0IEZlYg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00377296-vlsjrvhhhz-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Samay Raina Unfiltered - India Tour</h3>
+            <p class="text-base font-normal text-[#333333]">Sophia Auditorium: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VHVlLCAyMyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00327409-pwurartgxg-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">All Star Standup Comedy</h3>
+            <p class="text-base font-normal text-[#333333]">The Habitat: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VHVlLCAyMyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00370883-cymfhvnuzz-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Tonight In Juhu - A Standup Comedy Show</h3>
+            <p class="text-base font-normal text-[#333333]">The J Spot: Mumbai</p>
+        </div>
+        <button id="next7"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+
+    <div id="mov7b" class="flex justify-between">
+        <button id="prev7"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNyBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00380807-qbpkngppxa-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Biswa Kalyan Rath LIVE in Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">Infinity Mall: Malad, Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00355125-bffbzkcxbs-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Kisi Ko Batana Mat FT. ANUBHAV SINGH BASSI</h3>
+            <p class="text-base font-normal text-[#333333]">Shanmuknanda Hall: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAzIEZlYg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00368222-cbmukhtfrq-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Prashasti Singh - Man of the House (Stand Up Tour)</h3>
+            <p class="text-base font-normal text-[#333333]">St. Andrews Auditorium: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAxNCBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00326254-pqnuusbygk-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">RelationShit Advice</h3>
+            <p class="text-base font-normal text-[#333333]">Above The Habitat: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00379265-fhgzvnxueg-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Ace of Spades: Stand-Up Comedy</h3>
+            <p class="text-base font-normal text-[#333333]">Spades: Mumbai</p>
+        </div>
+    </div>
+</div>
+
+<div class="w-[1440px] pl-32 py-10">
+    <h1 class="font-bold text-2xl text-[#333333] pb-3">The Latest Plays</h1>
+    <div id="mov8a" class="hidden justify-between">
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAxIEZlYiBvbndhcmRz,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00383029-pctzvpwbyl-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Friend Request(Marathi Play)</h3>
+            <p class="text-base font-normal text-[#333333]">Marathi</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAyNSBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00377442-qnmmajzkun-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Celebrating JERSEY BOYS | MUMBAI</h3>
+            <p class="text-base font-normal text-[#333333]">English</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCA0IEZlYg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00355311-glcnrapwpb-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Kucch Bhi Ho Sakta Hai</h3>
+            <p class="text-base font-normal text-[#333333]">Hindi</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAyNSBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00047780-wzcahuffpq-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Marathi Bana</h3>
+            <p class="text-base font-normal text-[#333333]">Marathi</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAyNSBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00118976-fzuncfvsvx-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Tu Mhansil Tasa</h3>
+            <p class="text-base font-normal text-[#333333]">Marathi</p>
+        </div>
+        <button id="next8"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+
+    <div id="mov8b" class="flex justify-between">
+        <button id="prev8"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00380148-fvvddxdwhy-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Mazya Baaykocha Navara</h3>
+            <p class="text-base font-normal text-[#333333]">Marathi</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00364523-sdaqgstcwz-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Jar Tar Chi Goshta</h3>
+            <p class="text-base font-normal text-[#333333]">Marathi</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCA4IEZlYiBvbndhcmRz,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00051378-urlsjyumwf-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Punha Sahi Re Sahi</h3>
+            <p class="text-base font-normal text-[#333333]">Marathi</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00354941-rwdsfmldwc-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Kaun Gele Gaon</h3>
+            <p class="text-base font-normal text-[#333333]">Marathi</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyOCBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00375691-vxhtjkkmtb-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Housewife Ni Hu Tu Tu</h3>
+            <p class="text-base font-normal text-[#333333]">Gujarati</p>
+        </div>
+    </div>
+</div>
+
+<div class="w-[1440px] pl-32 py-10">
+    <h1 class="font-bold text-2xl text-[#333333] pb-3">Top Games & Sports Events</h1>
+    <div id="mov9a" class="hidden justify-between">
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyOCBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00383623-ddajsfjsss-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Ceat Indian Supercross Racing League 2024</h3>
+            <p class="text-base font-normal text-[#333333]">Shree Shiv Chhatrapathi Sports Complex: Pune</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxMCBGZWIgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00384105-tnkxbgtyuc-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Warriors Dream Series 7</h3>
+            <p class="text-base font-normal text-[#333333]">Fit And Fight Club, Nerul East: Navi Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxMSBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00376279-dledckrdbt-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Juhu Fitness Marathon</h3>
+            <p class="text-base font-normal text-[#333333]">JVPD Grounds: Juhu</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VHVlLCAyMyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00374465-nqyjjtlxhv-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Airsoft Gun India Shooting Experience Arena</h3>
+            <p class="text-base font-normal text-[#333333]">Hakone Entertainment Centre: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00341740-lshargalpg-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Sobo Cycle Ride - LiveB4YouDie</h3>
+            <p class="text-base font-normal text-[#333333]">Meeting Point - HP Petrol Pump Colaba</p>
+        </div>
+        <button id="next9"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+
+    <div id="mov9b" class="flex justify-between">
+        <button id="prev9"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00382627-vauggqvadn-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">INTERNATIONAL Marathon 2024</h3>
+            <p class="text-base font-normal text-[#333333]">Your Place and Your Time : India</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyOCBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00384388-vsbkrsqmas-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">FUNSKOOL CATAN TOURNAMENT - BBGCon2024</h3>
+            <p class="text-base font-normal text-[#333333]">Bombay Board Game Club: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00377705-kweebwrszp-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Xs 63 - Yacht Sailing in Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">Jetty No 5: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyNSBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00376522-uzmddffbgt-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Mumbai 10 KM Run</h3>
+            <p class="text-base font-normal text-[#333333]">KLAY Preschool and DayCare- Malad West: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCA0IEZlYg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00380617-tqveydhcxz-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">SPORTIVES- KIDS CYCLOTHON 2024</h3>
+            <p class="text-base font-normal text-[#333333]">Mindspace Landscape Garden: Mumbai</p>
+        </div>
+    </div>
+</div>
+<div class="w-[1440px] pl-32 py-10  bg-[#f5f5f5]">
+    <h1 class="font-bold text-2xl text-[#333333] pb-3">Trending Searches Right Now</h1>
+    <div class="flex flex-wrap justify-start pr-10">
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]">Fighter </span><br>Movies</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]"> Anyone But You</span><br> Movies</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]"> Lollapalooza India 2024</span><br>  Events</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]"> Hanu-Man</span><br>  Movies</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]">Animal</span><br> Movies</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]">Mughal-E-Azam</span><br> Plays</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]">Ole Aale </span><br> Movies</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]">Merry Christmas </span><br> Movies</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]"> Sunburn Arena Ft. Indo Warehouse - Mumbai </span><br>Events</div>
+    <div class="basis-auto mx-3 my-3 border-separate border-1 py-3 px-7 bg-white shadow-sm text-[#333333] font-normal"><span class="font-medium text-[#F84464]"> Om Shanti Om </span><br>Movies</div>
+</div>
+</div>
+
+<div class="w-[1440px] pl-32 pt-10 pb-24">
+    <h1 class="font-bold text-2xl text-[#333333] pb-3">Explore Fun Activites</h1>
+    <div id="mov10a" class="hidden justify-between">
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAyNCBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00022344-wqubpzpzbv-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Mumbai Filmcity Tour with Bollywood Park</h3>
+            <p class="text-base font-normal text-[#333333]">Gate No.1, Dadasaheb Phalke Chittranagri: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAyNCBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00376989-rapyfnjeca-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Tickets: Museum of Solutions</h3>
+            <p class="text-base font-normal text-[#333333]">Museum of Solutions: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00383406-bsacgvjxdg-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">K.C. College International Film-Festival</h3>
+            <p class="text-base font-normal text-[#333333]">Kishinchand Chellaram: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAyNCBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00382227-eflfjkyhag-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Playseum</h3>
+            <p class="text-base font-normal text-[#333333]">Playseum: Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAyNSBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00372152-ueqlweppnf-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">BEST-Operation of Heritage Tour.</h3>
+            <p class="text-base font-normal text-[#333333]"></p>Dr. S.P.M. Chowk (Museum): Mumbai
+        </div>
+        <button id="next10"><i class="fa-solid fa-2xl fa-circle-chevron-right"></i></button>
+    </div>
+
+    <div id="mov10b" class="flex justify-between">
+        <button id="prev10"><i class="fa-solid fa-2xl fa-circle-chevron-left"></i></button>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00370823-gxtqqbypsa-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Wet n Joy WaterPark & Amusement Park</h3>
+            <p class="text-base font-normal text-[#333333]">Wet N Joy Water Park: Lonavla</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNyBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00310275-qfjwjwnlre-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Imagicaa Water Park</h3>
+            <p class="text-base font-normal text-[#333333]">Imagicaa Water Park (Khopoli): Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00127447-xznydbdumx-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">BOUNCE Inc Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">BOUNCE Inc Mumbai</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyNiBKYW4gb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00315217-klupuuyfds-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">Hamleys Play- Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]">Hamleys Play, Jio World Drive, BKC</p>
+        </div>
+        <div class="w-60   pr-5">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAxNCBGZWI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00382785-blfluslghc-portrait.jpg"
+            class="w-60   h-[370px] rounded-md" alt="">
+            <h3 class="text-lg font-semibold text-[#333333] my-2 text-wrap">CANDLELIGHT INDIA Valentine's Day Special- Mumbai</h3>
+            <p class="text-base font-normal text-[#333333]"></p>Royal Opera House Theatre: Mumbai
+        </div>
+    </div>
+</div>
+
+<div class="block bg-zinc-800 pb-5">
+    <div class=" h-24 flex justify-between px-36">
+        <div class="flex justify-between items-center basis-auto">
+            <img src="https://in.bmscdn.com/webin/common/icons/hut.svg" class="w-10" alt="">
+        <h3 class="text-white font-bold text-base px-4">List your Show</h3>
+        <p class="text-white text-base">Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow</p>
+        </div>
+        <div class="flex justify-center basis-auto py-7">
+        <button class="bg-rose-500 text-white px-5 font-medium rounded-sm">Contact today!</button>
+    </div>
+    </div>
+    <div class="bg-zinc-700 h-32 flex justify-evenly items-center">
+        <div class="border-separate ">
+            <a href="">
+                <i class="fa-solid fa-headset fa-3x ml-11 hover:text-white" ></i>
+            <p class="text-gray-400 cursor-pointer mt-3 hover:text-white">24/7 Customer Care</p>
+            </a>
+            </div>
+            <div class="border-separate">
+                <a href="">
+                <i class="fa-solid fa-ticket fa-3x ml-20 hover:text-white"></i>
+                <p class="text-gray-400 cursor-pointer mt-3 hover:text-white">Resend Booking Confirmation</p>
+            </a></div>
+            <div class="border-separate">
+                <a href="" >
+                    <i class="fa-solid fa-envelope-open-text fa-3x ml-20 hover:text-white"></i>
+                <p class="text-gray-400 cursor-pointer mt-3 hover:text-white">Subscribe To The Newsletter</p>
+            </a></div>
+    </div>
+    <div id="seclast" class="bg-zinc-800 h-auto block pl-32 pt-5 pb-10">
+        <div class="text-gray-300 text-[13px]">MOVIES NOW SHOWING IN MUMBAI
+            <p class="mt-5 text-gray-400 text-[10px]">FIGHTER | HANUMAN | MAIN ATAL HOON | MERRY CHRISTMAS | OLE AALE | 
+                ANYONE BUT YOU | TRAILERS SCREENING SHOW | ITTA KITTA | THE BEEKEPER | MALAIKOTTAI VAALIBAN
+            </p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">UPCOMING MOVIES IN MUMBAI
+            <p class="mt-5 text-gray-400 text-[10px]">MUDAKKARUTHAN | THOOKUDURAI | SINGAPORE SALOON | LOCAL SARAKKU | ALEXA | 
+                DULHA RAJA | LAMRAN DA LAANA | NIYATHI | KOLI ESRU | PREMALO
+            </p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">MOVIES BY GENRE
+            <p class="mt-5 text-gray-400 text-[10px]">DRAMA MOVIES | ROMANTIC MOVIES | ACTION MOVIES | THRILLER MOVIES | 
+                COMEDY MOVIES | FANTASY MOVIES | ADVENTURE MOVIES | CRIME MOVIES | MUSICAL MOVIES | BIOGRAPHY MOVIES
+            </p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">MOVIES BY LANGUAGE
+            <p class="mt-5 text-gray-400 text-[10px]">MOVIES IN HINDI | MOVIES IN ENGLISH | MOVIES IN MALAYALAM | MOVIES IN MARATHI | 
+                MOVIES IN TAMIL | MOVIES IN TELUGU | MOVIES IN GUJARATI | MOVIES IN CHHATTISGARHI | MOVIES IN KHASI | MOVIES IN TULU
+            </p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">SPORTS EVENTS IN MUMBAI
+            <p class="mt-5 text-gray-400 text-[10px]">RUNNING | CYCLING | ONLINE GAMES | ONLINE SPORTS | SAILING | WALKING | 
+            ARCHERY | ATHLETICS | BADMINTON | BASKETBALL</p> 
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">EVENTS IN TOP CITIES
+            <p class="mt-5 text-gray-400 text-[10px]">EVENTS IN MUMBAI | EVENTS IN DELHI-NCR | EVENTS IN CHENNAI | EVENTS IN BENGALURU | 
+                EVENTS IN HYDERABAD | EVENTS IN PUNE | EVENTS IN KOLKATA | EVENTS IN AHMEDABAD | EVENTS IN KOCHI
+            </p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">CINEMAS IN TOP CITIES
+        <p class="mt-5 text-gray-400 text-[10px]">CINEMAS IN MUMBAI | CINEMAS IN DELHI-NCR | CINEMAS IN CHENNAI | CINEMAS IN BENGALURU | 
+            CINEMAS IN HYDERABAD | CINEMAS IN PUNE | CINEMAS IN KOLKATA | CINEMAS IN AHMEDABAD | CINEMAS IN KOCHI</p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">PLAYS IN TOP CITIES
+        <p class="mt-5 text-gray-400 text-[10px]">PLAYS IN MUMBAI | PLAYS IN DELHI-NCR | PLAYS IN CHENNAI | PLAYS IN BENGALURU | 
+            PLAYS IN HYDERABAD | PLAYS IN PUNE | PLAYS IN KOLKATA | PLAYS IN AHMEDABAD | PLAYS IN KOCHI</p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">ACTIVITIES IN TOP CITIES
+        <p class="mt-5 text-gray-400 text-[10px]">THINGS TO DO IN MUMBAI | THINGS TO DO IN DELHI-NCR | THINGS TO DO IN CHENNAI | THINGS TO DO IN BENGALURU | 
+            THINGS TO DO IN HYDERABAD | THINGS TO DO IN PUNE | THINGS TO DO IN KOLKATA | THINGS TO DO IN AHMEDABAD | THINGS TO DO IN KOCHI</p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">MOVIES NOW SHOWING
+        <p class="mt-5 text-gray-400 text-[10px]">FIGHTER | HANUMAN | MAIN ATAL HOON | MALAIKOTTAI VAALIBAN | SINGAPORE SALOON | 
+            AYALAAN | GUNTUR KAARAM | BLUE STAR | MISSION CHAPTER 1 | CAPTAIN MILLER
+        </p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">COUNTRIES
+        <p class="mt-5 text-gray-400 text-[10px]">INDONESIA | SINGAPORE | UAE | SRI LANKA | WEST INDIES</p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">HELP
+        <p class="mt-5 text-gray-400 text-[10px]">ABOUT US | CONTACT US | CURRENT OPENING | PRESS RELEASE | PRESS COVERAGE | 
+            SITEMAP | FAQs | TERMS AND CONDITIONS | PRIVACY POLICY
+        </p>
+        </div>
+        <div class="text-gray-300 text-[13px] my-8">BOOKMYSHOW EXCLUSIVES
+        <p class="mt-5 text-gray-400 text-[10px]">LOLLAPALOOZA INDIA | SUPERSTAR | BOOKASMILE | CORPORATE VOUCHERS | GIFT CARDS | 
+            LIST MY SHOW | OFFERS | STREAMS | TRAILERS
+        </p>
+        </div>
+    </div>
+    <div class="flex items-center">
+    <hr class="border-separate border-zinc-500 w-[45%] ">
+    <img src="https://in.bmscdn.com/webin/common/icons/logo.svg" class="mx-5" alt="">
+    <hr class="border-separate border-zinc-500 w-[45%] ">
+    </div>
+    <div class="w-1/5 m-auto  flex justify-between py-10 px-2">
+        <div class="bg-zinc-600 hover:bg-white rounded-full px-2.5 py-4 flex justify-center h-auto">
+            <i class="fa-brands fa-lg fa-facebook-f"></i>
+        </div>
+        <div class="bg-zinc-600 hover:bg-white rounded-full px-2.5 pb-[9px] pt-[9px] flex justify-center h-auto">
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
+        <div class="bg-zinc-600 hover:bg-white rounded-full px-2.5 py-4 flex justify-center h-auto">
+            <i class="fa-brands fa-lg fa-instagram"></i>
+        </div>
+        <div class="bg-zinc-600 hover:bg-white rounded-full px-2.5 pb-[9px] pt-[9px] flex justify-center h-auto">
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="bg-zinc-600 hover:bg-white rounded-full px-2.5 py-4 flex justify-center h-auto">
+            <i class="fa-brands fa-lg fa-pinterest-p"></i>
+        </div>
+        <div class="bg-zinc-600 hover:bg-white rounded-full px-2.5 py-[17px] flex justify-center h-auto">
+            <i class="fa-brands fa-lg fa-linkedin-in"></i>
+        </div>
+    </div>
+</div>
+
+<div id="navbar-js-container"></div>
+
+    <script src="dist/homebundle.js"  >
+    </script>
+</body>
+</html>
