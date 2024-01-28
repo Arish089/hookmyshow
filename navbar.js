@@ -13,6 +13,7 @@ bars.addEventListener('click',()=>{
     menu_bar.style.display = "none";
   })
 })
+//21426818161-71m688js47nr4qpeolrvepapos5scs9l.apps.googleusercontent.com
 
 // Initialize Google Sign-In function
 function initializeGoogleSignIn() {
@@ -21,7 +22,16 @@ function initializeGoogleSignIn() {
           client_id: '21426818161-71m688js47nr4qpeolrvepapos5scs9l.apps.googleusercontent.com' // Replace with your actual client ID
       });
 
-      auth2.attachClickHandler('google-signin-button', {}, onSignIn, onFailure);
+      // Check if user is already signed in and update UI accordingly
+      if (auth2.isSignedIn.get()) {
+          var user = auth2.currentUser.get();
+          updateSigninStatus(user);
+      } else {
+          // Listen for sign-in events
+          auth2.currentUser.listen(function(user) {
+              updateSigninStatus(user);
+          });
+      }
   });
 }
 
@@ -32,7 +42,6 @@ function onSignIn(googleUser) {
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
-  document.getElementById('google-signin-button').textContent = `Hey ${profile.getName()}`
   // Additional actions related to the signed-in user can be performed here
 }
 
@@ -42,9 +51,30 @@ function onFailure(error) {
   // Handle sign-in failure
 }
 
+// Update UI based on sign-in status
+function updateSigninStatus(user) {
+  if (user) {
+      // User is signed in, update UI accordingly
+      console.log('User is signed in.');
+  } else {
+      // User is signed out, update UI accordingly
+      console.log('User is signed out.');
+  }
+}
+
 // Call initializeGoogleSignIn when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', initializeGoogleSignIn);
-initializeGoogleSignIn()
+document.addEventListener('DOMContentLoaded', function() {
+  initializeGoogleSignIn();
+
+  // Automatically sign out the user when the page is refreshed
+  var auth2 = gapi.auth2.getAuthInstance();
+  if (auth2.isSignedIn.get()) {
+      auth2.signOut().then(function() {
+          console.log('User signed out.');
+      });
+  }
+});
+
 
 // Set cookie with SameSite=None and Secure attributes
 document.cookie = 'cookieName=cookieValue; SameSite=None; Secure';
